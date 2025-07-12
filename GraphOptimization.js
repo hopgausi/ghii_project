@@ -227,3 +227,12 @@ const graphData = {
 const layout = new GraphLayout(graphData);
 layout.optimizeLayout();
 console.log("Optimized positions:", layout.getOptimizedPositions());
+
+const optimizedPositions = layout.getOptimizedPositions();
+const nodesArray = Object.entries(optimizedPositions).map(([id, pos]) => ({
+  id,
+  x: pos.x,
+  y: pos.y,
+}));
+
+console.log("Optimized nodes array:", nodesArray);
