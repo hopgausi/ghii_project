@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Layout Optimization Visualization</title>
+</head>
+<body>
+    <div style="display: flex; gap: 20px; align-items: flex-start">
+        <div>
+        <canvas
+          id="originalCanvas"
+          width="450"
+          height="450"
+          style="border: 1px solid #000"
+        ></canvas>
+      </div>
+      <div>
+        <canvas
+          id="optimizedCanvas"
+          width="450"
+          height="450"
+          style="border: 1px solid #000"
+        ></canvas>
+      </div>
+    </div>
+
+    <!-- Include the JavaScript files -->
+    <script src="GraphOptimization.js"></script>
+    <script src="GraphVisualization.js"></script>
+    
+    <script>
+        // Initialize the visualization when the page loads
+        window.onload = function() {
+            createGraphVisualization(graphData, 'originalCanvas', 'optimizedCanvas');
+        };
+    </script>
+</body>
+</html>
